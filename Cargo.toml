@@ -2,5 +2,9 @@
 name = "lncat"
 version = "0.1.0"
 edition = "2021"
+description = "A `cat` like command line programm for me to practice Rust"
+license = "MIT"
+repository = "https://github.com/libnist/lncat.git"
+
 
 [dependencies]

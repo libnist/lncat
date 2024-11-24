@@ -25,6 +25,21 @@ pub struct Config {
 }
 
 impl Config {
+
+    /// Accepts an iterator of type String and returns a `Result<Config, String>`
+    /// 
+    /// The function below helps to create a config struct that will contain all
+    /// the file path's. if there is an invalid file path like a directory or
+    /// a complete invalid piece of text it will return a String error.
+    /// 
+    /// # Example
+    /// 
+    /// ```
+    /// use lncat::Config;
+    /// use std::env;
+    /// 
+    /// let config_result: Result<Config, String> = Config::from(env::args());
+    /// ```
     pub fn from(mut paths: impl Iterator<Item=String>) -> Result<Config, String> {
 
         // Ignore the first element
